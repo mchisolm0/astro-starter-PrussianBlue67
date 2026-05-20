@@ -1,11 +1,168 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import turtleEating from '../assets/turtle-eating.jpg';
+import titoLogo from '../assets/titoLogo.jpg';
+import titoSwimming from '../assets/titoSwimming.jpeg';
+import turtleFace from '../assets/turtleFace.jpeg';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">About Turtles</a>
+        <a href="#">Fun Facts</a>
+        <a href="#">Different Types of Turtles</a>
+        <a href="#">Saving Turtles</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="logo">
+        <img src={titoLogo.src} alt="turtle logo" class="tito" />
+        <h1>A Lesson About Turtles
+            From Tito the Turtle</h1>
+    </div>
+    <img src={turtleEating.src} alt="Green Sea Turtles" />
+    <img src={titoSwimming.src} alt="tito swimming" />
+    <img src={turtleFace.src} alt="turtle face" />
+
+<p></p>
+<hr></hr>
+<h1>Tito's Lesson</h1>
+<h3>What are Turtles?</h3>
+<h4>Turtles are reptiles of the order Testudines that have bodies encased in bony shells. There are more than 350 species of turtles.</h4>
+<h3>What are turtle shells made of?</h3>
+<h4>A turtle's shell is made of bone and cartilage. It consists of a top, which is called a carapace, and a bottom, which is called a plastron. The carapace and the plastron usually join along the sides of the body, creating a rigid skeletal box.</h4>
+<h3>Where do turtles live?</h3>
+<h4>There are more than 350 species of turtles living on land—on all continents on Earth except Antarctica—and in both salt water and fresh water. The greatest number of species occur in southeastern North America and in South Asia.</h4>
+<h3>What do turtles eat?</h3>
+<h4>Turtles eat a wide range of foods. Many turtles are omnivorous. Some turtles eat jellyfish and salps. Tortoises, which are a type of turtle, are predominantly herbivores, but some will consume invertebrates and carrion. Other turtles consume waterside vegetation. Some turtles even crush shells of mollusks in order to obtain the meat.</h4>
+<h3>What is the difference between a turtle and a tortoise?</h3>
+<h4>The primary difference is their habitat: tortoises live exclusively on land, while turtles spend most of their time in water. Biologically, all tortoises are technically turtles, but not all turtles are tortoises.</h4>
+<br></br>
+<hr></hr>
+<div class="facts-title">
+<h1>Fun Facts About Turtles</h1>
+</div>
+<div class="facts">
+<ol>
+    <li><h3> Turtles belong to one of the oldest reptile groups in the world beating snakes, crocodiles and alligators!</h3></li>
+    <li><h3> Just like your bones, a turtle's shell is actually part of its skeleton. It's made up of over 50 bones which include the turtle's rib cage and spine.</h3></li>
+    <li><h3> These cold-blooded creatures have an incredibly long life span. The oldest ever recorded, named Tu”i Malila, of Tonga Island, passed away at the grand old age of 188!</h3></li>
+    <li><h3> Sadly, many species of turtle are endangered! 129 of approximately 300 species of turtle and tortoise on Earth today are either vulnerable, endangered, or critically endangered, according to the IUCN. Threats include loss of habitat, pollution, poaching and the illegal pet trade.</h3></li>
+</ol>
+</div>
+<br></br>
+<hr></hr>
+<h1>Different Types of Turtles</h1>
+<div class="types">
+    <ul>
+        <li><h3>Sea Turtles</h3></li>
+
+        <li><h3>Common Snapping Turtle</h3></li>
+        <li><h3>Tortoise</h3></li>
+        <li><h3>Eastern Box Turtle</h3></li>
+        <li><h3>Mud Turtle</h3></li>
+        <li><h3>Asian Box Turtle</h3></li>
+        <li><h3>Musk Turtle</h3></li>
+    </ul>
+</div>
+<br></br>
+<hr></hr>
 </Layout>
+
+
+
+
+<style>
+h1 {
+	text-align: center;
+	text-shadow: darkblue 1px 1px;
+	border: 1px solid black;
+}
+li {
+	text-align: center;
+}
+h4 {
+	text-align: center;
+}
+h3 {
+	text-align: center;
+}
+img {
+    width: 30%;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100px;
+    border: 3px solid dark green;
+}
+.logo {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    right: 300px;
+
+}
+.tito {
+    display: block;
+    margin: auto;
+    width: 20%;
+}
+.facts {
+    text-align: center;
+}
+.facts-title {
+    text-align: center;
+}
+</style>
